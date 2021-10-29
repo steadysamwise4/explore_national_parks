@@ -56,3 +56,30 @@ body {
 .home-link:hover {
     color:black;
 }
+/* index.html*/
+.home-body {
+    background-color: lightslategray;
+}
+.state {
+    text-decoration: none;
+    color:midnightblue;
+    font-size: 1.3rem;
+    font-weight: bolder;
+    
+}
+.state:hover {
+    color:black;
+}
+.home-bar-head {
+    margin:0;
+    background-color:mintcream;
+     
+     font-size: 1.6rem;
+     font-weight: bolder; 
+}
+.homebar {
+    background-color: lightslategray ;
+}
+.state-intro {
+    background-color: mintcream;
+}
