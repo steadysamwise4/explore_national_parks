@@ -83,3 +83,14 @@ body {
 .state-intro {
     background-color: mintcream;
 }
+.nps-info {
+    background-color: lightslategray;
+}
+.home-info {
+    color:midnightblue;
+}
+.home-title {
+    line-height: 2.0;
+    font-size: 2rem;
+    border-top: midnightblue solid 2px;
+}
