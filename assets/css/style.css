@@ -1,9 +1,39 @@
+* {
+    
+}
 body {
     background-color: cornsilk;
 }
+.nav {
+    display:flex;
+    margin: auto;
+    width:100%;
+    justify-content: center;
+    
+    
+}
+.nav-sub {
+    padding: 1rem;
+    
+
+}
+.title {
+    line-height: 2.0;
+    font-size: 3rem;
+}
+.bar-head {
+   margin:0;
+   background-color: gold;
+    
+    font-size: 1.6rem;
+    font-weight: bolder;
+}
+.parks-title {
+    width: 100%;
+}
 .intro {
-    font-size: 1.5rem;
-    font-weight: bold;
+    font-size: 0.8rem;
+    font-weight:normal;
 }
 .park {
     text-decoration: none;
@@ -17,4 +47,12 @@ body {
 }
 .sidebar {
     margin:7px;
+    background-color: cornsilk;
+}
+.home-link {
+    text-decoration: none;
+    color:brown;
+}
+.home-link:hover {
+    color:black;
 }
