@@ -1,9 +1,39 @@
+* {
+    
+}
 body {
     background-color: cornsilk;
 }
+.nav {
+    display:flex;
+    margin: auto;
+    width:100%;
+    justify-content: center;
+    
+    
+}
+.nav-sub {
+    padding: 1rem;
+    
+
+}
+.title {
+    line-height: 2.0;
+    font-size: 3rem;
+}
+.bar-head {
+   margin:0;
+   background-color: gold;
+    
+    font-size: 1.6rem;
+    font-weight: bolder;
+}
+.parks-title {
+    width: 100%;
+}
 .intro {
-    font-size: 1.5rem;
-    font-weight: bold;
+    font-size: 0.8rem;
+    font-weight:normal;
 }
 .park {
     text-decoration: none;
@@ -17,4 +47,50 @@ body {
 }
 .sidebar {
     margin:7px;
+    background-color: cornsilk;
+}
+.home-link {
+    text-decoration: none;
+    color:brown;
+}
+.home-link:hover {
+    color:black;
+}
+/* index.html*/
+.home-body {
+    background-color: lightslategray;
+}
+.state {
+    text-decoration: none;
+    color:midnightblue;
+    font-size: 1.3rem;
+    font-weight: bolder;
+    
+}
+.state:hover {
+    color:black;
+}
+.home-bar-head {
+    margin:0;
+    background-color:mintcream;
+     
+     font-size: 1.6rem;
+     font-weight: bolder; 
+}
+.homebar {
+    background-color: lightslategray ;
+}
+.state-intro {
+    background-color: mintcream;
+}
+.nps-info {
+    background-color: lightslategray;
+}
+.home-info {
+    color:midnightblue;
+}
+.home-title {
+    line-height: 2.0;
+    font-size: 2rem;
+    border-top: midnightblue solid 2px;
 }
