@@ -51,3 +51,13 @@ $(document).ready(function () {
   // States dropdown handler
   $("#state").on("change", onStateSelectionChange);
 });
+
+
+
+/*
+http://maps.google.com/maps?q=38.44023613,-96.5670822&t=h
+
+38.44023613
+-96.5670822
+
+*/
