@@ -7,6 +7,7 @@
     <title>National Parks of Minnesota</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
     <link rel="Stylesheet" href="./assets/css/style.css">
+    <link rel="Stylesheet" href="./assets/css/minnesota.css">
 </head>
 <body>
     <!-- Nav -->
@@ -41,32 +42,33 @@
         <div class="tile is-2 is-vertical is-parent">
           <div class="tile is-child has-text-centered sidebar">
               <div class="parks-title">
-                <p class=" bar-head">Top 10 Parks</p>
+                <p class=" bar-head">Parks</p>
                 </div>
             <p class="intro">Choose a link below to explore!</p>
             <ul class="park-list">
-                <a href="#park-link"><li class="park"><span id="park-one"></span></li></a>
-                <a href="#park-link"><li class="park"><span id="park-two"></span></li></a>
-                <a href="#park-link"><li class="park"><span id="park-three"></span></li></a>
-                <a href="#park-link"><li class="park"><span id="park-four"></span></li></a>
-                <a href="#park-link"><li class="park"><span id="park-five"></span></li></a>
-                <a href="#park-link"><li class="park"><span id="park-six"></span></li></a>
+                <button><li class="park"><span data-park="0"id="park-one"></span></li></button>
+                <button><li class="park"><span data-park="1"id="park-two"></span></li></button>
+                <button><li class="park"><span data-park="2"id="park-three"></span></li></button>
+                <button><li class="park"><span data-park="3"id="park-four"></span></li></button>
+                <button><li class="park"><span data-park="4"id="park-five"></span></li></button>
+                <button><li class="park"><span data-park="5"id="park-six"></span></li></button>
                 
                 
             </ul>
           </div>
           <div class="tile is-child has-text-centered sidebar">
-            <p>There's no place like</p>
+            <p class="error"></p>
             <a href="./index.html" class="home-link">Home</a>
             
           </div> 
         </div>
         <div class="tile is-vertical is-parent">
             <figure class="tile is-child box image is-3by1">
-                <img src="./assets/images/minnesota.jpg" alt="sunflowers at sunset">
+                <img src="./assets/images/minnesota.jpg" alt="Fog over a lake in Voyageurs National Park">
             </figure>
+            <p class="caption"><strong">"Land of 10,000 Lakes"</strong></p>
           <div class="tile is-child box" id="park-link">
-              <figure class="image is-3by1">
+            <!-- <figure class="image is-3by1">
                 <img src="./assets/images/brown.jpg">
             </figure>
             <p  class="title">Brown v Board</p>
@@ -74,7 +76,7 @@
             <p>Open M-F 8am - 5pm</p>
             <p>157 Riverside Avenue, Topeka, Ks</p>
             <p>Activities: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dignissimos repudiandae magni aliquam voluptatum neque tempora beatae consequuntur, quas quidem ipsa voluptatem! Fugiat harum sequi labore earum quaerat suscipit, beatae delectus?</p>
-            <p> Current Weather Conditions:</p>
+            <p> Current Weather Conditions:</p> -->
           </div>
         </div>
       </div>
