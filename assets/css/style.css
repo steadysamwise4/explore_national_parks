@@ -38,8 +38,9 @@ body {
 .park {
     text-decoration: none;
     color:brown;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     font-weight: bolder;
+    border-top: 1px solid slategray;
     
 }
 .park:hover {
