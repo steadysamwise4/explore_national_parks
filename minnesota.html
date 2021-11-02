@@ -14,7 +14,7 @@
     <nav class="nav">
         <div class="nav-sub">
           <div>
-            <h1 class="title">National Parks of Minnesota</h1>
+            <h1 class="title top">National Parks of Minnesota</h1>
             
           </div>
         <!--</div>
@@ -46,27 +46,29 @@
                 </div>
             <p class="intro">Choose a link below to explore!</p>
             <ul class="park-list">
-                <button><li class="park"><span data-park="0"id="park-one"></span></li></button>
-                <button><li class="park"><span data-park="1"id="park-two"></span></li></button>
-                <button><li class="park"><span data-park="2"id="park-three"></span></li></button>
-                <button><li class="park"><span data-park="3"id="park-four"></span></li></button>
-                <button><li class="park"><span data-park="4"id="park-five"></span></li></button>
-                <button><li class="park"><span data-park="5"id="park-six"></span></li></button>
+                <a href="#park-link"><button><li class="park"><span data-park="0"id="park-one"></span></li></button></a>
+                <a href="#park-link"><button><li class="park"><span data-park="1"id="park-two"></span></li></button></a>
+                <a href="#park-link"><button><li class="park"><span data-park="2"id="park-three"></span></li></button></a>
+                <a href="#park-link"><button><li class="park"><span data-park="3"id="park-four"></span></li></button></a>
+                <a href="#park-link"><button><li class="park"><span data-park="4"id="park-five"></span></li></button></a>
+                <a href="#park-link"><button><li class="park"><span data-park="5"id="park-six"></span></li></button></a>
                 
                 
             </ul>
           </div>
           <div class="tile is-child has-text-centered sidebar">
             <p class="error"></p>
-            <a href="./index.html" class="home-link">Home</a>
+            <a href="./index.html" class=" title home-link">National Parks Home</a>
             
           </div> 
         </div>
-        <div class="tile is-vertical is-parent">
-            <figure class="tile is-child box image is-3by1">
+        <div class="tile is-vertical is-parent ">
+          <div class="hero">
+            <figure class="tile is-child box image is-2by1">
                 <img src="./assets/images/minnesota.jpg" alt="Fog over a lake in Voyageurs National Park">
             </figure>
             <p class="caption"><strong">"Land of 10,000 Lakes"</strong></p>
+          </div>
           <div class="tile is-child box" id="park-link">
             <!-- <figure class="image is-3by1">
                 <img src="./assets/images/brown.jpg">
@@ -77,6 +79,9 @@
             <p>157 Riverside Avenue, Topeka, Ks</p>
             <p>Activities: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dignissimos repudiandae magni aliquam voluptatum neque tempora beatae consequuntur, quas quidem ipsa voluptatem! Fugiat harum sequi labore earum quaerat suscipit, beatae delectus?</p>
             <p> Current Weather Conditions:</p> -->
+          </div>
+          <div class="weather tile is-child box">
+            
           </div>
         </div>
       </div>
