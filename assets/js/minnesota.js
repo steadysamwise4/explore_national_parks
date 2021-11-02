@@ -179,17 +179,24 @@ var getForecastData = function(latitude, longitude) {
 
  var displayForecastData = function(weather) {
     console.log(weather);
+    // clear old
+    currentWeatherEl.innerHTML = "";
+
+    // current weather heading
     var currentWeatherHeading = "Current Conditions:"
     var currentWeatherHeadingEl = document.createElement("h4");
     currentWeatherHeadingEl.classList = "info";
     currentWeatherHeadingEl.textContent = currentWeatherHeading;
     currentWeatherEl.appendChild(currentWeatherHeadingEl);
+
+    // weather  brief description
     var weatherDescript = weather.current.weather[0].description;
     var weatherDescriptEl = document.createElement("p")
     weatherDescriptEl.classList = "activities";
     weatherDescriptEl.textContent = weatherDescript;
     currentWeatherEl.appendChild(weatherDescriptEl);
-
+     
+    // temp
     var temp = Math.round(weather.current.temp);
     var tempEl = document.createElement("p");
     tempEl.classList = "activities";
