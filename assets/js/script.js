@@ -5,6 +5,7 @@ var pageHeadingEl = document.querySelector("#page-heading");
 
 var bodySectionEl = document.querySelector("#body-section");
 var stateSectionEl = document.querySelector("#state-section");
+var stateDetailsEl = document.querySelector("#state-details");
 var parkSelectorEl = document.querySelector("#park-selector");
 
 var parks = []; // to hold the data returned from the NPS API call
@@ -14,8 +15,7 @@ function onStateSelectionChange() {
   var stateName = $(this).find("option:selected").text();
   pageHeadingEl.innerHTML = "Explore " + stateName;
 
-  bodySectionEl.classList.toggle("is-hidden");
-  stateSectionEl.classList.toggle("is-hidden");
+  showElement(bodySectionEl, false);
 
   fetchNPsForState(stateCode)
     .then((parksInState) => {
@@ -25,7 +25,8 @@ function onStateSelectionChange() {
 
       parks = parksInState;
       buildParksSelector(parksInState.data);
-      parkSelectorEl.classList.toggle("is-hidden");
+      showElement(parkSelectorEl, true);
+      showElement(stateSectionEl, true);
     })
     .catch((err) => {
       console.log("Error: ", err.message);
@@ -85,6 +86,9 @@ function onParkSelectionChange() {
   $("#park-activities").html(parkActivities);
 
   $("#park-designation").html(parks.data[idx].designation);
+
+  showElement(stateSectionEl, true);
+  showElement(stateDetailsEl, true);
 }
 
 function getParkEmail(contacts) {
@@ -147,6 +151,19 @@ function getParkAddress(addresses) {
 
 function getMapLink(lat, lon) {
   return encodeURI("http://maps.google.com/maps?q=" + lat + "," + lon + "&t=h");
+}
+
+function showElement(el, show) {
+    if (show) {
+        if (el.classList.contains("is-hidden")) {
+            el.classList.remove("is-hidden");
+        }
+    }
+    else {
+        if (!el.classList.contains("is-hidden")) {
+            el.classList.add("is-hidden");
+        }
+    }
 }
 
 function onTopMenuButtonClick() {

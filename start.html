@@ -128,7 +128,7 @@
     </section>
 
     <section id="state-section" class="hero is-info is-fullheight is-hidden">
-        <div class="columns">
+        <div id="state-details" class="columns is-hidden">
             <div id="start-state" class="column container">
                 <h5 id="park-name" class="pt-2 pb-2 mb-1 title is-5">Brown v. Board of Education National Historic Site:
                 </h5>
@@ -260,6 +260,35 @@
                     -->
 
                 </div>
+                <div class="columns container">
+                    <div class="column">
+                        <h5 id="park-cur-weather" class="pt-2 pb-2 mb-1 title is-5">Current Weather Conditions:
+                        </h5>
+                        <p class="mb-0 subtitle is-6">
+                            Temperature:&nbsp; <span id="park-temp">32 F</span>
+                        </p>
+                        <p class="mb-0 subtitle is-6">
+                            Wind Speed:&nbsp; <span id="park-wind">32 F</span>
+                        </p>
+                        <p class="mb-0 subtitle is-6">
+                            Humidity:&nbsp; <span id="park-humidity">32 F</span>
+                        </p>
+                        <p class="mb-0 subtitle is-6">
+                            UV Index:&nbsp; <span id="park-uvindex">32 F</span>
+                        </p>
+
+                        <h5 id="park-forecast" class="pt-4 pb-2 mb-1 title is-5">5-Day Forecast:</h5>
+                        <div class="columns container">
+                            <div class="column">Day 1</div>
+                            <div class="column">Day 2</div>
+                            <div class="column">Day 3</div>
+                            <div class="column">Day 4</div>
+                            <div class="column">Day 5</div>
+                        </div>
+                    </div>
+                </div>
+
+
             </div>
         </div>
     </section>
