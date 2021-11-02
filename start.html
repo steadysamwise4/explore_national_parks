@@ -130,7 +130,7 @@
     <section id="state-section" class="hero is-info is-fullheight is-hidden">
         <div class="columns">
             <div id="start-state" class="column container">
-                <h5 id="park-desc" class="pt-2 pb-2 mb-1 title is-5">Brown v. Board of Education National Historic Site:
+                <h5 id="park-name" class="pt-2 pb-2 mb-1 title is-5">Brown v. Board of Education National Historic Site:
                 </h5>
                 <p id="park-description" class="mb-0 subtitle is-6">
                     The story of Brown v. Board of Education, which ended legal segregation in public schools, is one of
@@ -159,8 +159,8 @@
                                     </span>
                                 </button>
                             </header>
-                            <div class="card-content">
-                                <div class="content">
+                            <div class="card-content p-2">
+                                <div id="park-address" class="content">
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis
                                     mauris.
                                     <a href="#">@bulmaio</a>. <a href="#">#css</a> <a href="#">#responsive</a>
@@ -169,9 +169,10 @@
                                 </div>
                             </div>
                             <footer class="card-footer">
-                                <a href="#" class="card-footer-item">Save</a>
-                                <a href="#" class="card-footer-item">Edit</a>
-                                <a href="#" class="card-footer-item">Delete</a>
+                                <p class="card-footer-item tag is-medium is-link is-light">
+                                    email:&nbsp; <span id="park-email">Footer-Left</span>
+                                </p>
+                                <a id="park-map-link" href="#" target="_blank" class="card-footer-item tag is-medium is-link is-light">Park Map</a>
                             </footer>
                         </div>
                     </div>
@@ -179,7 +180,7 @@
                         <div class="card">
                             <header class="card-header">
                                 <p class="card-header-title">
-                                    Park Hours
+                                    Operating Hours
                                 </p>
                                 <button class="card-header-icon" aria-label="more options">
                                     <span class="icon">
@@ -187,8 +188,8 @@
                                     </span>
                                 </button>
                             </header>
-                            <div class="card-content">
-                                <div class="content">
+                            <div class="card-content p-2">
+                                <div id="park-hours" class="content">
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis
                                     mauris.
                                     <a href="#">@bulmaio</a>. <a href="#">#css</a> <a href="#">#responsive</a>
@@ -197,9 +198,10 @@
                                 </div>
                             </div>
                             <footer class="card-footer">
-                                <a href="#" class="card-footer-item">Save</a>
-                                <a href="#" class="card-footer-item">Edit</a>
-                                <a href="#" class="card-footer-item">Delete</a>
+                                <p class="card-footer-item tag is-medium is-link is-light">
+                                    Phone:&nbsp; <span id="park-phone">Footer-Left</span>
+                                </p>
+                                <a id="park-website-link" href="#" target="_blank" class="card-footer-item tag is-medium is-link is-light">Park Website</a>
                             </footer>
                         </div>
                     </div>
@@ -216,22 +218,47 @@
                                     </span>
                                 </button>
                             </header>
-                            <div class="card-content">
-                                <div class="content">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis
-                                    mauris.
-                                    <a href="#">@bulmaio</a>. <a href="#">#css</a> <a href="#">#responsive</a>
-                                    <br>
-                                    <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+                            <div class="card-content p-2">
+                                <div id="park-activities" class="content">
+                                    <!--
+                                    <ul>
+                                        <li>Coffee</li>
+                                        <li>Tea</li>
+                                        <li>Milk</li>
+                                      </ul>
+                                    -->
                                 </div>
                             </div>
                             <footer class="card-footer">
-                                <a href="#" class="card-footer-item">Save</a>
-                                <a href="#" class="card-footer-item">Edit</a>
-                                <a href="#" class="card-footer-item">Delete</a>
+                                <p class="card-footer-item tag is-medium is-link is-light">
+                                    Designation:&nbsp; <span id="park-designation">Footer-Left</span>
+                                </p>
                             </footer>
                         </div>
                     </div>
+
+                    <!--
+                    <div class="column">
+                        <div class="card">
+                            <div class="card-content">
+                                <p class="content">
+                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto,
+                                    corrupti.
+                                </p>
+                                <p class="content is-6">Lorem Ipsum.</p>
+                            </div>
+                            <footer class="card-footer">
+                                <p class="card-footer-item">
+                                    <span>Footer-Left</span>
+                                </p>
+                                <p class="card-footer-item">
+                                    <span>Footer-Right</span>
+                                </p>
+                            </footer>
+                        </div>
+                    </div>
+                    -->
+
                 </div>
             </div>
         </div>
