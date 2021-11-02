@@ -11,6 +11,7 @@ var parkSixEl = document.querySelector("#park-six");
 var errorEl = document.querySelector(".error");
 
 var parkListEl = document.querySelector(".park-list");
+var parkDataEl = document.querySelector("#park-link");
 
 
 var buttonClickHandler = function(event) {
@@ -70,7 +71,19 @@ var getParksData = function(park) {
 }
 
 var displayParkData = function(nps, i) {
-    
+    // clear old
+    parkDataEl.innerHTML = "";
+     
+    // add image to the dom
+    var image = nps.data[i].images[0].url;
+    var figureEl = document.createElement("figure");
+    figureEl.classList = "image is-2by1";
+    var imgEl = document.createElement("img");
+    imgEl.setAttribute("src", image);
+    figureEl.appendChild(imgEl);
+    parkDataEl.appendChild(figureEl);
+
+
     
 
 
