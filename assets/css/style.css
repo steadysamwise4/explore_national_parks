@@ -1,6 +1,6 @@
-* {
+/* * {
     
-}
+} */
 body {
     background-color: cornsilk;
 }
@@ -56,6 +56,7 @@ body {
 }
 .home-link:hover {
     color:black;
+    font-weight: bold;
 }
 /* index.html*/
 .home-body {
@@ -94,4 +95,9 @@ body {
     line-height: 2.0;
     font-size: 2rem;
     border-top: midnightblue solid 2px;
+}
+
+.nav {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
 }
