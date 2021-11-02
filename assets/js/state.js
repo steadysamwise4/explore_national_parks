@@ -27,4 +27,3 @@ var parkService = {
     }
 }
 
-parkService.getParksData("MO");
