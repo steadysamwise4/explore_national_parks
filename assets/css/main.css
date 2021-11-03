@@ -1,6 +1,10 @@
 html,body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   }
+
+  /*
+  background image styling obtained from bulma template
+  */
   .hero.is-info {
     background: linear-gradient(
         rgba(0, 0, 0, 0.5),
