@@ -110,6 +110,12 @@ function buildParkDetails(idx) {
 function buildweatherDetails(idx, wd) {
     console.log("In Build Weather Details for Park " + parks.data[idx].fullName);
     console.log(wd);
+
+    $("#park-temp").html(wd.current.temp + "°F");
+    $("#park-wind").html(wd.current.wind_speed + "MPH");
+    $("#park-humidity").html(wd.current.humidity + "%");
+    //$("#park-uvindex").html(wd.current.temp + "°F");
+
 }
 
 function getParkEmail(contacts) {
