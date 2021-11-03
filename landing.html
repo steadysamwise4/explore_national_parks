@@ -4,16 +4,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Explore National Parks by State</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
     <link rel="Stylesheet" href="./assets/css/style.css">
 </head>
-<body>
-    <!-- Nav -->
-    <nav class="nav">
+
+<body class="home-body">
+     <!-- Nav -->
+     <nav class="nav">
         <div class="nav-sub">
           <div>
-            <h1 class="title">National Parks of Kansas</h1>
+            <h1 class="title">Explore National Parks by State</h1>
             
           </div>
         <!--</div>
@@ -39,36 +40,36 @@
       <!-- Hero -->
       <div class="tile is-ancestor">
         <div class="tile is-2 is-vertical is-parent">
-          <div class="tile is-child has-text-centered sidebar">
+          <div class="tile is-child has-text-centered homebar">
               <div class="parks-title">
-                <p class=" bar-head">Top 10 Parks</p>
+                <p class=" home-bar-head">Available States</p>
                 </div>
-            <p class="intro">Choose a link below to explore!</p>
+            <p class="state-intro">Choose a link below to explore!</p>
             <ul class="park-list">
-                <a href="#park-link"><li class="park">Brown v Board</li></a>
-                <a href="#park-link"><li class="park">Park 2</li></a>
-                <a href="#park-link"><li class="park">Park 3</li></a>
-                <a href="#park-link"><li class="park">Park 4</li></a>
-                <a href="#park-link"><li class="park">Park 5</li></a>
-                <a href="#park-link"><li class="park">Fort Scott</li></a>
-                <a href="#park-link"><li class="park">Park 7</li></a>
-                <a href="#park-link"><li class="park">Park 8</li></a>
-                <a href="#park-link"><li class="park">Park 9</li></a>
-                <a href="#park-link"><li class="park">Park 10</li></a>
+                <a href="./kansas.html"><li class="state">Kansas</li></a>
+                <a href="./missouri.html"><li class="state">Missouri</li></a>
+                <a href="./wyoming.html"><li class="state">Wyoming</li></a>
+                <a href=""><li class="state">State 4</li></a>
+                <a href=""><li class="state">State 5</li></a>
+                <a href=""><li class="state">Montana</li></a>
+                <a href=""><li class="state">State 7</li></a>
+                <a href=""><li class="state">State 8</li></a>
+                <a href=""><li class="state">State 9</li></a>
+                <a href="./minnesota.html"><li class="state">Minnesota</li></a>
                 
             </ul>
           </div>
-          <div class="tile is-child has-text-centered sidebar">
+          <!-- <div class="tile is-child has-text-centered sidebar">
             <p>There's no place like</p>
-            <a href="./index.html" class="home-link">Home</a>
+            <a href="./kansas.html" class="home-link">Home</a>
             
-          </div> 
+          </div> -->
         </div>
         <div class="tile is-vertical is-parent">
             <figure class="tile is-child box image is-3by1">
-                <img src="./assets/images/sunflowers.png" alt="sunflowers at sunset">
+                <img src="./assets/images/yellowstone.jpg" alt="Old Faithful geyser">
             </figure>
-          <div class="tile is-child box" id="park-link">
+          <!--<div class="tile is-child box" id="park-link">
               <figure class="image is-3by1">
                 <img src="./assets/images/brown.jpg">
             </figure>
@@ -78,15 +79,25 @@
             <p>157 Riverside Avenue, Topeka, Ks</p>
             <p>Activities: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dignissimos repudiandae magni aliquam voluptatum neque tempora beatae consequuntur, quas quidem ipsa voluptatem! Fugiat harum sequi labore earum quaerat suscipit, beatae delectus?</p>
             <p> Current Weather Conditions:</p>
-          </div>
+          </div> -->
         </div>
       </div>
-      <footer class="footer">
-        <h2 class="content has-text-centered"><strong>Made by</strong> Raman, Sam and Rob <strong>&copy;</strong> 2021</h2>
-      </footer>
-      </html>
+      <section class="section is-small nps-info">
+        <h2 class="home-title">National Parks Info:</h1>
+        <h3 class="subtitle home-info">
+            The National Park Service preserves unimpaired the natural and cultural resources and values of the National Park System for the enjoyment, education, and inspiration of this and future generations. The Park Service cooperates with partners to extend the benefits of natural and cultural resource conservation and outdoor recreation throughout this country and the world.
+        </h3>
+        <h3 class="subtitle home-info">
+            "National parks are the best idea we ever had. Absolutely American, absolutely democratic, they reflect us at our best rather than our worst."
+        </br>
+                So wrote author Wallace Stegner in 1983.
+        </h3>
+      </section>
+
+    <!-- changed name of this file which was previously index.html -->
+    
 </body>
-    <footer class="footer">
+<footer class="footer">
   <h2 class="content has-text-centered"><strong>Made by</strong> Raman, Sam and Rob <strong>&copy;</strong> 2021</h2>
 </footer>
 </html>
