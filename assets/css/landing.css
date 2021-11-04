@@ -19,3 +19,22 @@ html,body {
     padding: 1rem 0;
     line-height: 1.5;
   }
+  .navbar {
+    justify-content: center;
+  }
+  .navbar-menu {
+    justify-content: center;
+  }
+  .navbar-item {
+    justify-content: center;
+  }
+  .header {
+    display: flex;
+    flex-direction: column;
+  }
+  #page-heading {
+    text-align: center;
+  }
+  #navbarMenu {
+
+  }

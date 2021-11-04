@@ -19,16 +19,16 @@
     <section id="header-section" class="hero is-info">
         <div class="hero-head">
             <nav class="navbar">
-                <div class="container">
+                <div class="header">
                     <div>
                         <h1 id="page-heading" class="title is-1">Explore National Parks</h1>
-                        <span class="navbar-burger burger" data-target="navbarMenu">
+                        <span class="navbar-burger burger { 'is-active': showNav }" @click="showNav = !showNav" data-target="navbarMenu">
                             <span></span>
                             <span></span>
-                        </span>
+                        </span>  
                     </div>
-                    <div id="navbarMenu" class="navbar-menu">
-                        <div class="navbar-end">
+                    <div id="navbarMenu" class="navbar-menu { 'is-active': showNav }">
+                        <span class="navbar-center" >
                             <span class="navbar-item">
                                 <div id="park-selector" class="select level-item has-text-centered is-hidden">
                                     <select id="national-park">
