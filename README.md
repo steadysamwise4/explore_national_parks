@@ -17,7 +17,7 @@ and the activities that are available in the Park. It also includes the current 
 ## Screenshot
 ![Explore National Parks1](./assets/images/Explore-NP-State-Selection.png)
 ![Explore National Parks2](./assets/images/Explore-NP-Park-Selection.png)
-![Explore National Parks3](./assets/images/Explore_National_Parks.mp4)
+![Explore National Parks3](./assets/images/Explore_National_Parks.gif)
 
 ## URL
 * [Deployed Application](https://ramantv.github.io/explore_national_parks/)
