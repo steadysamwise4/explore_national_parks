@@ -111,11 +111,30 @@ function buildweatherDetails(idx, wd) {
     console.log("In Build Weather Details for Park " + parks.data[idx].fullName);
     console.log(wd);
 
+    $("#curdt-time").html(moment().format("MM/DD/YYYY h:mm a"));
+
     $("#park-temp").html(wd.current.temp + "°F");
     $("#park-wind").html(wd.current.wind_speed + "MPH");
     $("#park-humidity").html(wd.current.humidity + "%");
-    //$("#park-uvindex").html(wd.current.temp + "°F");
+    $("#park-uvindex").html(wd.current.uvi);
 
+    $("#forecast-day1").html(moment().add(1, "days").format("MM/DD/YYYY"));
+    $("#day1-temp").html(wd.daily[0].temp.day + "°F");
+    $("#day1-wind").html(wd.daily[0].wind_speed + "MPH");
+    $("#day1-humidity").html(wd.daily[0].humidity + "%");
+    $("#day1-uvindex").html(wd.daily[0].uvi);
+
+    $("#forecast-day2").html(moment().add(2, "days").format("MM/DD/YYYY"));
+    $("#day2-temp").html(wd.daily[1].temp.day + "°F");
+    $("#day2-wind").html(wd.daily[1].wind_speed + "MPH");
+    $("#day2-humidity").html(wd.daily[1].humidity + "%");
+    $("#day2-uvindex").html(wd.daily[1].uvi);
+
+    $("#forecast-day3").html(moment().add(3, "days").format("MM/DD/YYYY"));
+    $("#day3-temp").html(wd.daily[2].temp.day + "°F");
+    $("#day3-wind").html(wd.daily[2].wind_speed + "MPH");
+    $("#day3-humidity").html(wd.daily[2].humidity + "%");
+    $("#day3-uvindex").html(wd.daily[2].uvi);
 }
 
 function getParkEmail(contacts) {
@@ -133,7 +152,7 @@ function getParkPhone(contacts) {
 
 function getParkHours(hours) {
   var hoursString = hours[0].description + "<br>";
-  hoursString += "Standard Hours: <br>";
+  hoursString += "<strong>Standard Hours:</strong> <br>";
   hoursString += JSON.stringify(hours[0].standardHours) + "<br>";
   hoursString +=
     "For closures/exceptions visit National Park Website." + "<br>";

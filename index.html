@@ -19,16 +19,16 @@
     <section id="header-section" class="hero is-info">
         <div class="hero-head">
             <nav class="navbar">
-                <div class="container">
+                <div class="header">
                     <div>
                         <h1 id="page-heading" class="title is-1">Explore National Parks</h1>
-                        <span class="navbar-burger burger" data-target="navbarMenu">
+                        <!-- <span class="navbar-burger burger { 'is-active': showNav }" @click="showNav = !showNav" data-target="navbarMenu">
                             <span></span>
                             <span></span>
-                        </span>
+                        </span>   -->
                     </div>
-                    <div id="navbarMenu" class="navbar-menu">
-                        <div class="navbar-end">
+                    <div id="navbarMenu" >
+                        <div class="navbar-center" >
                             <span class="navbar-item">
                                 <div id="park-selector" class="select level-item has-text-centered is-hidden">
                                     <select id="national-park">
@@ -57,10 +57,11 @@
         <div id="start-body" class="hero-body">
             <div id="start-container" class="container has-text-centered">
                 <div class="column is-6 is-offset-3">
-                    <h1 class="title">
+
+                  <h1 class="title" id="quote-title">
                         America's National Parks
                     </h1>
-                    <h2 class="subtitle">
+                    <h2 class="subtitle" id="quote">
                         "National parks are the best idea we ever had. Absolutely American, absolutely democratic, they
                         reflect us at our best rather than our worst." -Wallace Stegner.
                     </h2>
@@ -139,25 +140,25 @@
                     secretaries, welders, ministers and students who simply wanted to be treated equally.
                 </p>
                 <figure class="image mb-1 is-fullwidth">
-                    <img id="park-pic" src="./assets/images/sunflowers.png">
+                    <img id="park-pic" src=""> 
                 </figure>
-                <!-- 
-                <h5 id="park-address" class="title is-5">Address: </h5>
+                
+                <!-- <h5 id="park-address" class="title is-5">Address: </h5>
                 <h5 id="park-hours" class="title is-5">Hours: </h5>
                 <h5 id="park-activities" class="title is-5">Activities: </h5>
-                -->
-                <div class="columns container">
-                    <div class="column">
+                 -->
+                <div class="columns container card-holder">
+                    <div class="column column-card">
                         <div class="card">
                             <header class="card-header">
                                 <p class="card-header-title">
                                     Address
                                 </p>
-                                <button class="card-header-icon" aria-label="more options">
+                                <!-- <button class="card-header-icon" aria-label="more options">
                                     <span class="icon">
                                         <i class="fas fa-angle-down" aria-hidden="true"></i>
                                     </span>
-                                </button>
+                                </button> -->
                             </header>
                             <div class="card-content p-2">
                                 <div id="park-address" class="content">
@@ -176,17 +177,17 @@
                             </footer>
                         </div>
                     </div>
-                    <div class="column">
+                    <div class="column column-card">
                         <div class="card">
                             <header class="card-header">
                                 <p class="card-header-title">
                                     Operating Hours
                                 </p>
-                                <button class="card-header-icon" aria-label="more options">
+                                <!-- <button class="card-header-icon" aria-label="more options">
                                     <span class="icon">
                                         <i class="fas fa-angle-down" aria-hidden="true"></i>
                                     </span>
-                                </button>
+                                </button> -->
                             </header>
                             <div class="card-content p-2">
                                 <div id="park-hours" class="content">
@@ -206,17 +207,17 @@
                         </div>
                     </div>
 
-                    <div class="column">
+                    <div class="column column-card">
                         <div class="card">
                             <header class="card-header">
                                 <p class="card-header-title">
                                     Activities
                                 </p>
-                                <button class="card-header-icon" aria-label="more options">
+                                <!-- <button class="card-header-icon" aria-label="more options">
                                     <span class="icon">
                                         <i class="fas fa-angle-down" aria-hidden="true"></i>
                                     </span>
-                                </button>
+                                </button> -->
                             </header>
                             <div class="card-content p-2">
                                 <div id="park-activities" class="content">
@@ -260,34 +261,74 @@
                     -->
 
                 </div>
-                <div class="columns container">
-                    <div class="column">
-                        <h5 id="park-cur-weather" class="pt-2 pb-2 mb-1 title is-5">Current Weather Conditions:
-                        </h5>
-                        <p class="mb-0 subtitle is-6">
-                            Temperature:&nbsp; <span id="park-temp">32 F</span>
-                        </p>
-                        <p class="mb-0 subtitle is-6">
-                            Wind Speed:&nbsp; <span id="park-wind">32 F</span>
-                        </p>
-                        <p class="mb-0 subtitle is-6">
-                            Humidity:&nbsp; <span id="park-humidity">32 F</span>
-                        </p>
-                        <p class="mb-0 subtitle is-6">
-                            UV Index:&nbsp; <span id="park-uvindex">32 F</span>
-                        </p>
-
-                        <h5 id="park-forecast" class="pt-4 pb-2 mb-1 title is-5">5-Day Forecast:</h5>
-                        <div class="columns container">
-                            <div class="column">Day 1</div>
-                            <div class="column">Day 2</div>
-                            <div class="column">Day 3</div>
-                            <div class="column">Day 4</div>
-                            <div class="column">Day 5</div>
+                <div class="columns container is-12">
+                    <div class="box column is-3">    <!-- Start column #1 -->
+                        <div class="card">
+                            <header class="card-header">
+                                <p class="card-header-title">
+                                    Current Weather:&nbsp; <span id="curdt-time"></span>
+                                </p>
+                            </header>
+                            <div class="card-content">
+                                <p class="content mb-1 pb-1">Temperature:&nbsp; <span id="park-temp"></span></p>
+                                <p class="content mb-1 pb-1">Wind Speed:&nbsp; <span id="park-wind"></span></p>
+                                <p class="content mb-1 pb-1">Humidity:&nbsp; <span id="park-humidity"></span></p>
+                                <p class="content mb-1 pb-1">UV Index:&nbsp; <span id="park-uvindex"></span></p>
+                            </div>
                         </div>
-                    </div>
-                </div>
-                    <!-- Footer to be added later -->
+                    </div>                  <!-- End Column #1 -->
+
+                    <div class="box column container is-9">    <!-- Column #2 -->
+                        <div class="columns container is-12">
+                            <div class="column is-4"> 
+                                <div class="card">
+                                    <header class="card-header">
+                                        <p class="card-header-title">
+                                            Forecast:&nbsp; <span id="forecast-day1"></span>
+                                        </p>
+                                    </header>
+                                    <div class="card-content">
+                                        <p class="content mb-1 pb-1">Daytime Temp:&nbsp; <span id="day1-temp"></span></p>
+                                        <p class="content mb-1 pb-1">Wind Speed:&nbsp; <span id="day1-wind"></span></p>
+                                        <p class="content mb-1 pb-1">Humidity:&nbsp; <span id="day1-humidity"></span></p>
+                                        <p class="content mb-1 pb-1">UV Index:&nbsp; <span id="day1-uvindex"></span></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="column is-4"> 
+                                <div class="card">
+                                    <header class="card-header">
+                                        <p class="card-header-title">
+                                            Forecast:&nbsp; <span id="forecast-day2"></span>
+                                        </p>
+                                    </header>
+                                    <div class="card-content">
+                                        <p class="content mb-1 pb-1">Daytime Temp:&nbsp; <span id="day2-temp"></span></p>
+                                        <p class="content mb-1 pb-1">Wind Speed:&nbsp; <span id="day2-wind"></span></p>
+                                        <p class="content mb-1 pb-1">Humidity:&nbsp; <span id="day2-humidity"></span></p>
+                                        <p class="content mb-1 pb-1">UV Index:&nbsp; <span id="day2-uvindex"></span></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="column is-4"> 
+                                <div class="card">
+                                    <header class="card-header">
+                                        <p class="card-header-title">
+                                            Forecast:&nbsp;<span id="forecast-day3"></span>
+                                        </p>
+                                    </header>
+                                    <div class="card-content">
+                                        <p class="content mb-1 pb-1">Daytime Temp:&nbsp; <span id="day3-temp"></span></p>
+                                        <p class="content mb-1 pb-1">Wind Speed:&nbsp; <span id="day3-wind"></span></p>
+                                        <p class="content mb-1 pb-1">Humidity:&nbsp; <span id="day3-humidity"></span></p>
+                                        <p class="content mb-1 pb-1">UV Index:&nbsp; <span id="day3-uvindex"></span></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>                  <!-- End Column #2 -->
+
+                <!-- Footer to be added later -->
             </div>
         </div>
     </section>
@@ -298,7 +339,7 @@
     <script src="./assets/js/parkdata.js"></script>
     <script src="./assets/js/weatherdata.js"></script>
     <script src="./assets/js/script.js"></script>
-
 </body>
 
+>>>>>>> e90fd97559940d456ae3542533bdd9323a14c11c
 </html>
