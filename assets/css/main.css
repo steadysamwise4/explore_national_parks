@@ -19,6 +19,7 @@ html,body {
     padding: 1rem 0;
     line-height: 1.5;
   }
+  
   .navbar {
     justify-content: center;
   }
@@ -27,6 +28,7 @@ html,body {
   }
   .navbar-item {
     justify-content: center;
+    display: flex;
   }
   .header {
     display: flex;
@@ -34,7 +36,60 @@ html,body {
   }
   #page-heading {
     text-align: center;
+    font-size: 3.3rem;
+    
   }
-  #navbarMenu {
+  #park-name {
+    text-align: center;
+    font-size: 2.0rem;
+  }
+  
+  .column-card {
+      height: auto;
+      width: 375px;
+     
 
+  }
+  .card {
+    height: 250px;
+    width: auto;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .columns {
+    flex-wrap: wrap;
+  }
+  .card-header  {
+    position: sticky;
+    top: 0;
+    
+    background-color: cornsilk;
+  }
+  .card-footer {
+    position: sticky;
+    bottom: 0;
+  }
+  .card-content {
+    height: 250px;
+    overflow-y: auto;
+  }
+  .content {
+    width: 100%;
+  }
+  .card-holder {
+    margin-top: 50px;
+    display: flex;
+    margin-top: 50
+px
+;
+    align-items: center;
+    justify-content: center;
+  }
+  @media screen and (min-width: 200px) {
+
+    .navbar-item {
+        justify-content: center;
+    }
   }

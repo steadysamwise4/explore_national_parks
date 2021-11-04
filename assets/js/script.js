@@ -106,7 +106,7 @@ function getParkPhone(contacts) {
 
 function getParkHours(hours) {
   var hoursString = hours[0].description + "<br>";
-  hoursString += "Standard Hours: <br>";
+  hoursString += "<strong>Standard Hours:</strong> <br>";
   hoursString += JSON.stringify(hours[0].standardHours) + "<br>";
   hoursString +=
     "For closures/exceptions visit National Park Website." + "<br>";
