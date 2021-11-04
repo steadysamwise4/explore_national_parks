@@ -153,10 +153,37 @@ function getParkPhone(contacts) {
 function getParkHours(hours) {
   var hoursString = hours[0].description + "<br>";
   hoursString += "<strong>Standard Hours:</strong> <br>";
-  hoursString += JSON.stringify(hours[0].standardHours) + "<br>";
+  hoursString += formatStandardHoursforDisplay(hours[0].standardHours);
   hoursString +=
     "For closures/exceptions visit National Park Website." + "<br>";
   return hoursString;
+}
+
+function formatStandardHoursforDisplay(stdHours) {
+  var stdHoursStr = "";
+  if (stdHours.monday && (stdHours.monday.toLowerCase() !== "unknown")) {
+      stdHoursStr += "  Mon: " + stdHours.monday + "<br>";
+  }
+  if (stdHours.tuesday && (stdHours.tuesday.toLowerCase() !== "unknown")) {
+    stdHoursStr += "  Tue: " + stdHours.tuesday + "<br>";
+  }
+  if (stdHours.wednesday && (stdHours.wednesday.toLowerCase() !== "unknown")) {
+    stdHoursStr += "  Wed: " + stdHours.wednesday + "<br>";
+  }
+  if (stdHours.thursday && (stdHours.thursday.toLowerCase() !== "unknown")) {
+    stdHoursStr += "  Thu: " + stdHours.thursday + "<br>";
+  }
+  if (stdHours.friday && (stdHours.friday.toLowerCase() !== "unknown")) {
+    stdHoursStr += "  Fri: " + stdHours.friday + "<br>";
+  }
+  if (stdHours.saturday && (stdHours.saturday.toLowerCase() !== "unknown")) {
+    stdHoursStr += "  Sat: " + stdHours.saturday + "<br>";
+  }
+  if (stdHours.sunday && (stdHours.sunday.toLowerCase() !== "unknown")) {
+    stdHoursStr += "  Sun: " + stdHours.sunday + "<br>";
+  }
+
+  return stdHoursStr;
 }
 
 function getParkActivities(acts) {
@@ -226,7 +253,7 @@ $(document).ready(function () {
   // States dropdown handler
   $("#state").on("change", onStateSelectionChange);
 
-  // States dropdown handler
+  // Parks dropdown handler
   $("#national-park").on("change", onParkSelectionChange);
 });
 
