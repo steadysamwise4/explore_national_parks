@@ -31,6 +31,7 @@ html,body {
   }
   .navbar-item {
     justify-content: center;
+    display: flex;
   }
   .header {
     display: flex;
