@@ -33,4 +33,4 @@ and the activities that are available in the Park. It also includes the current 
 * OpenWeather API
 
 ## Developers
-* *Rub Burson*, *Sam Davenport* and *Raman TV*.
+* *Rob Burson*, *Sam Davenport* and *Raman TV*.

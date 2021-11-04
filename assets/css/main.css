@@ -82,11 +82,37 @@ html,body {
     width: 100%;
   }
   .card-holder {
-    margin-top: 50px;
+    
     display: flex;
-    margin-top: 50px;
+    
     align-items: center;
     justify-content: center;
+  }
+  .card-box {
+    height: 315px;
+  }
+  .box-current {
+    height: 315px;
+  }
+  .weather-head {
+    background-color: lightskyblue;
+    
+  }
+  .weather-card {
+    height:290px;
+  }
+  .weather-holder {
+    margin-top: 30px;
+  }
+  .foot-clan {
+    background-color: black;
+    height: 65px;
+    color:white;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    
+   
   }
   @media screen and (min-width: 200px) {
 
