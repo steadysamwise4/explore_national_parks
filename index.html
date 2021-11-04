@@ -147,6 +147,7 @@
                 <h5 id="park-hours" class="title is-5">Hours: </h5>
                 <h5 id="park-activities" class="title is-5">Activities: </h5>
                  -->
+                 <br />
                 <div class="columns container card-holder">
                     <div class="column column-card">
                         <div class="card">
@@ -261,10 +262,11 @@
                     -->
 
                 </div>
+                <br />
                 <div class="columns container is-12">
-                    <div class="box column is-3">    <!-- Start column #1 -->
-                        <div class="card">
-                            <header class="card-header">
+                    <div class="box column is-3 box-current">    <!-- Start column #1 -->
+                        <div class="card weather-card">
+                            <header class="card-header weather-head">
                                 <p class="card-header-title">
                                     Current Weather:&nbsp; <span id="curdt-time"></span>
                                 </p>
@@ -278,11 +280,11 @@
                         </div>
                     </div>                  <!-- End Column #1 -->
 
-                    <div class="box column container is-9">    <!-- Column #2 -->
+                    <div class="box column container is-9 card-box">    <!-- Column #2 -->
                         <div class="columns container is-12">
                             <div class="column is-4"> 
-                                <div class="card">
-                                    <header class="card-header">
+                                <div class="card weather-card">
+                                    <header class="card-header weather-head">
                                         <p class="card-header-title">
                                             Forecast:&nbsp; <span id="forecast-day1"></span>
                                         </p>
@@ -296,8 +298,8 @@
                                 </div>
                             </div>
                             <div class="column is-4"> 
-                                <div class="card">
-                                    <header class="card-header">
+                                <div class="card weather-card">
+                                    <header class="card-header weather-head">
                                         <p class="card-header-title">
                                             Forecast:&nbsp; <span id="forecast-day2"></span>
                                         </p>
@@ -311,8 +313,8 @@
                                 </div>
                             </div>
                             <div class="column is-4"> 
-                                <div class="card">
-                                    <header class="card-header">
+                                <div class="card weather-card">
+                                    <header class="card-header weather-head">
                                         <p class="card-header-title">
                                             Forecast:&nbsp;<span id="forecast-day3"></span>
                                         </p>
@@ -332,6 +334,10 @@
             </div>
         </div>
     </section>
+    
+    <footer class="foot-clan">
+        <h2 class="has-text-centered"><strong>Made by</strong> Raman, Sam and Rob <strong>&copy;</strong> 2021</h2>
+      </footer>
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
