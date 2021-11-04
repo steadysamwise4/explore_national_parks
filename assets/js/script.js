@@ -9,6 +9,7 @@ var stateDetailsEl = document.querySelector("#state-details");
 var parkSelectorEl = document.querySelector("#park-selector");
 
 var parks = []; // to hold the data returned from the NPS API call
+var parkWeather;
 
 function onStateSelectionChange() {
   var stateCode = $(this).val();
@@ -59,36 +60,62 @@ function onParkSelectionChange() {
   console.log("Selected Park Index = " + idx);
   console.log("Selected Park Name = " + name);
 
-  $("#park-name").html(parks.data[idx].fullName);
+  var lat = parks.data[idx].latitude;
+  var lon = parks.data[idx].longitude;
 
-  $("#park-description").html(parks.data[idx].description);
+  fetchWeatherForLocation(lat, lon)
+    .then((weatherData) => {
+      console.log(weatherData);
+      parkWeather = weatherData;
+      return weatherData;
+    }).then((w) => {
+        buildParkDetails(idx);
+        buildweatherDetails(idx, w);
+        showElement(stateSectionEl, true);
+        showElement(stateDetailsEl, true);
+    })
+    .catch((err) => {
+      console.log("Error: ", err.message);
+    });
 
-  $("#park-pic").attr("src", parks.data[idx].images[0].url);
+}
 
-  $("#park-address").html(getParkAddress(parks.data[idx].addresses));
+function buildParkDetails(idx) {
+    $("#park-name").html(parks.data[idx].fullName);
 
-  var parkEmail = getParkEmail(parks.data[idx].contacts);
-  $("#park-email").html(parkEmail);
+    $("#park-description").html(parks.data[idx].description);
+  
+    $("#park-pic").attr("src", parks.data[idx].images[0].url);
+  
+    $("#park-address").html(getParkAddress(parks.data[idx].addresses));
+  
+    var parkEmail = getParkEmail(parks.data[idx].contacts);
+    $("#park-email").html(parkEmail);
+  
+    var parkMapUrl = getMapLink(parks.data[idx].latitude, parks.data[idx].longitude);
+    $("#park-map-link").attr("href", parkMapUrl);
+  
+    $("#park-hours").html(getParkHours(parks.data[idx].operatingHours));
+  
+    var parkPhone = getParkPhone(parks.data[idx].contacts);
+    $("#park-phone").html(parkPhone);
+    $("#park-website-link").attr("href", parks.data[idx].url);
+  
+    var parkActivities = getParkActivities(parks.data[idx].activities);
+    $("#park-activities").html(parkActivities);
+  
+    $("#park-designation").html(parks.data[idx].designation);
+}
 
-  var parkMapUrl = getMapLink(
-    parks.data[idx].latitude,
-    parks.data[idx].longitude
-  );
-  $("#park-map-link").attr("href", parkMapUrl);
+function buildweatherDetails(idx, wd) {
+    console.log("In Build Weather Details for Park " + parks.data[idx].fullName);
+    console.log(wd);
 
-  $("#park-hours").html(getParkHours(parks.data[idx].operatingHours));
+    $("#park-temp").html(wd.current.temp + "°F");
+    $("#park-wind").html(wd.current.wind_speed + "MPH");
+    $("#park-humidity").html(wd.current.humidity + "%");
+    //$("#park-uvindex").html(wd.current.temp + "°F");
 
-  var parkPhone = getParkPhone(parks.data[idx].contacts);
-  $("#park-phone").html(parkPhone);
-  $("#park-website-link").attr("href", parks.data[idx].url);
-
-  var parkActivities = getParkActivities(parks.data[idx].activities);
-  $("#park-activities").html(parkActivities);
-
-  $("#park-designation").html(parks.data[idx].designation);
-
-  showElement(stateSectionEl, true);
-  showElement(stateDetailsEl, true);
 }
 
 function getParkEmail(contacts) {
@@ -184,10 +211,4 @@ $(document).ready(function () {
   $("#national-park").on("change", onParkSelectionChange);
 });
 
-/*
-http://maps.google.com/maps?q=38.44023613,-96.5670822&t=h
 
-38.44023613
--96.5670822
-
-*/

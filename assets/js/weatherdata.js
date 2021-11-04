@@ -38,3 +38,21 @@ function getWeatherforLocation(lat, lon) {
     }
   });
 }
+
+
+async function fetchWeatherForLocation(lat, lon) {
+  ///5-day forecast API
+  var forecastUrl = getForecastAPIUrl(lat, lon);
+  console.log("Going to fetch this URL for Forecast: " + forecastUrl);
+
+  let response = await fetch(forecastUrl);
+  if (!response.ok) {
+    var message = `An error has occured: ${response.status}`;
+    throw new Error(message);
+  }
+
+  var weatherData = await response.json();
+  console.log(weatherData);
+
+  return weatherData;
+}
